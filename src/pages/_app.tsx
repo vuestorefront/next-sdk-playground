@@ -1,5 +1,6 @@
 import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
+import { Layout } from '../../components/layout';
 import { initSDK, buildModule } from '@vsf-enterprise/sdk';
 import {
   boilerplateModule,
@@ -15,5 +16,9 @@ const sdkConfig = {
 export const sdk = initSDK<typeof sdkConfig>(sdkConfig);
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
