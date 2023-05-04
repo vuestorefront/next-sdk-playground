@@ -9,6 +9,12 @@ type ResponseData = {
 const methodsDir = '../app/src/pages/methods';
 
 const listRoutes = () => {
+   const isDirectoryExist = fs.existsSync(methodsDir);
+
+  if (!isDirectoryExist) {
+    return [];
+  }
+  
   const files = fs.readdirSync(methodsDir);
   const tsFiles = files.filter((file) => file.endsWith('.tsx'));
   const filePaths = tsFiles.map((file) => removeTsxExtension(file));
