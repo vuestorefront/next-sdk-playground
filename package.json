@@ -26,5 +26,11 @@
   },
   "devDependencies": {
     "@storefront-ui/typography": "^2.1.0"
+  },
+  "overrides": {
+    "react-json-view": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
   }
 }
