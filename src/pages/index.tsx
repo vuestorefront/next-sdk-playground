@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { sdk } from './_app';
 import { SfButton } from '@storefront-ui/react';
-import { RenderJson } from '@/components/RenderJson';
+import { RenderJson } from '../../components/RenderJson';
 
 export default function Home() {
   const [data, setData] = useState<null | Object>(null);
