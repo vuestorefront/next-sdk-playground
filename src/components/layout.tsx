@@ -5,7 +5,7 @@ export const Layout = ({ children }: any) => {
   const [methodRoutes, setMethodRoutes] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/api/getMethodList`)
+    fetch(`http://localhost:3002/api/getMethodList`)
       .then((res) => res.json())
       .then((data) => {
         setMethodRoutes(data.methodRoutes);
@@ -13,9 +13,9 @@ export const Layout = ({ children }: any) => {
   }, []);
 
   return (
-    <>
+    <div className='flex'> 
       <LeftDrawer methodRoutes={methodRoutes} />
-      <main>{children}</main>
-    </>
+      <main className='mx-auto'>{children}</main>
+    </div>
   );
 };
