@@ -23,7 +23,7 @@ export const TabBrowser: React.FC<TabBrowserProps> = ({ data }) => {
   };
 
   return (
-    <div className="mt-5">
+    <div>
       <div className="flex px-4 bg-neutral-600 rounded-t-lg py-2 gap-x-2">
         {data.map(({ language }, index) => (
           <button

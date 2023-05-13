@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 export const Layout = ({ children }: any) => {
   const [methodRoutes, setMethodRoutes] = useState([]);
 
+
   useEffect(() => {
-    fetch(`http://localhost:3002/api/getMethodList`)
+  const domain = window.location.host || '';
+    fetch(`http://${domain}/api/getMethodList`)
       .then((res) => res.json())
       .then((data) => {
         setMethodRoutes(data.methodRoutes);
