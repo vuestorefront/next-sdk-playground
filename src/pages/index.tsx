@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { sdk } from './_app';
+import { sdk } from './_app';
 import { SfButton, SfIconViewList } from '@storefront-ui/react';
 import { RenderJson } from '@/components/RenderJson';
 import { Card } from '@/components/Card';
