@@ -20,23 +20,19 @@ export const Card = ({ icon, title, description, href }: CardProps) => {
     <div
       className="p-8 w-full h-full flex flex-col"
     >
-      <slot>
         <div className="flex items-center">
             {icon}
         </div>
-        <slot name="title">
           <p
             className="font-semibold text-xl"
           >
             { title }
           </p>
-        </slot>
         <p
           className="mt-4 text-sm font-medium opacity-70"
         >
           { description }
         </p>
-      </slot>
     </div>
   </a>
   )
